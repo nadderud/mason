@@ -1,0 +1,73 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: public/img/upload
+public_folder: /img/upload
+
+collections:
+  - name: "artikler"
+    label: "Artikler"
+    label_singular: "artikkel"
+    folder: "src/pages/artikler"
+    create: true
+    preview: false
+    summary: "{{year}}-{{month}}-{{day}}: {{title}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { name: "templateKey", widget: "hidden", default: "blog-post" }
+      - { label: "Tittel", name: "title", widget: "string" }
+      - { label: "Bilde", name: "featuredimage", widget: image }
+      - {
+          label: "Ingress",
+          name: "description",
+          widget: "text",
+          pattern: [".{50,160}", "Må være mellom 50 og 160 tegn"],
+        }
+      - { label: "Innhold", name: "body", widget: "markdown" }
+      - { label: "Publisert dato", name: "date", widget: "datetime" }
+      - {
+          label: "Synlig i antall dager på forsiden",
+          name: "expireInDays",
+          widget: "number",
+          default: 60,
+          valueType: "int",
+          min: 0,
+          max: 365,
+        }
+      - { label: "Tagger", name: "tags", widget: "list" }
+
+  - name: "pages"
+    label: "Sider"
+    files:
+      - file: "src/pages/index.md"
+        label: "Forsiden"
+        delete: false
+        name: "index"
+        fields:
+          - { name: "templateKey", widget: "hidden", default: "index" }
+          - { label: Tittel, name: title, widget: string }
+          - { label: Bilde, name: image, widget: image }
+          - { label: Beskrivelse, name: description, widget: string }
+          - { label: "Instagram brukernavn", name: instagram, widget: string }
+
+      - file: "src/pages/info.md"
+        label: "Informasjon"
+        name: "info"
+        delete: false
+        fields:
+          - { label: Tittel, name: "title", widget: "string" }
+          - { label: Bilde, name: image, widget: image }
+          - { label: Beskrivelse, name: description, widget: string }
+          - { label: "Innhold", name: "body", widget: "markdown" }
+
+      - file: "src/pages/bli-speider.md"
+        label: "Bli speider"
+        name: "bli-speider"
+        delete: false
+        fields:
+          - { label: Tittel, name: "title", widget: "string" }
+          - { label: Bilde, name: image, widget: image }
+          - { label: Beskrivelse, name: description, widget: string }
+          - { label: "Innhold", name: "body", widget: "markdown" }
+

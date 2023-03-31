@@ -1,0 +1,42 @@
+---
+export interface Props {
+    title: string;
+    src: string;
+    alt?: string;
+}
+
+const { title, src, alt } = Astro.props;
+---
+
+<section>
+    <h3 class="text-3xl tracking-tight font-bold md:text-4xl md:w-150 z-10">{title}</h3>
+    <img src={src} alt={alt || title} class="bg-base-200" />
+</section>
+
+<style>
+    section {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1rem 1rem;
+        align-items: center;
+    }
+    h3 {
+        margin: 0;
+        padding: 1rem 1rem;
+    }
+    img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+    }
+
+    @media (max-width: 768px) {
+        section {
+            grid-template-columns: 1fr;
+        }
+    }
+
+</style>

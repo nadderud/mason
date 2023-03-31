@@ -1,0 +1,30 @@
+---
+import Layout from '~/layouts/BaseLayout.astro';
+import Header from '~/components/widgets/Header.astro';
+import Footer from '~/components/widgets/Footer.astro';
+import Announcement from '~/components/widgets/Announcement.astro';
+
+import type { MetaSEO } from '~/types';
+import { headerData } from '~/data';
+
+export interface Props {
+  meta?: MetaSEO;
+}
+
+const { meta } = Astro.props;
+---
+
+<Layout {meta}>
+  <slot name="announcement">
+    <Announcement />
+  </slot>
+  <slot name="header">
+    <Header {...headerData} />
+  </slot>
+  <main class="bg-base-100">
+    <slot />
+  </main>
+  <slot name="footer">
+    <Footer />
+  </slot>
+</Layout>

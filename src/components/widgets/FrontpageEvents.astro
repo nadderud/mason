@@ -1,0 +1,85 @@
+---
+import { getEventsFromSelectedGroups } from '~/utils/spond';
+
+const subGroupIds: string[] = [
+  'DEB269433BAD4F0F9F96AAC757678537',
+  '6549C386074E409EAAF5EDA6336129E5',
+];
+
+const rawEvents = await getEventsFromSelectedGroups(subGroupIds);
+
+const events = rawEvents.slice(0,4)
+
+---
+
+<section class='events px-5 pt-8'>
+  <div style='grid-area: text;' class='relative'>
+    <h2 class='text-2xl tracking-tight py-4'>Kommende arrangementer</h2>
+    <p>
+      Naddeurd speidergruppe gjennomfører mange spennende turer, arrangementer
+      og møter gjennom året. Sammen lager vi den beste friliftlivsopplevelsen!
+      For å holde deg som forelder/speider oppdatert gjennom året, bruker vi
+      Spond. Her kan du se noen av de kommende arrangementene.
+    </p>
+    <p class="py-2">
+      Trenger du bruker på Spond? <a href='#' class="link">Ler mer her</a>
+    </p>
+  </div>
+  {
+    events.map((event, i) => (
+      <div
+        style={`grid-area:${i === 0 ? 'event-large' : ''}`}
+        class='h-full flex flex-col'
+      >
+        <img class='bg-base-200 object-cover' src={event.picture || "/img/upload/vann.jpg"} />
+        <p>{new Date(event.startTimestamp).toLocaleDateString()}</p>
+        <h3 class="font-bold">{event.heading}</h3>
+      </div>
+    ))
+  }
+</section>
+
+<style>
+  h2 {
+    padding-left: 30px;
+  }
+
+  h2::before {
+    content: '';
+    display: block;
+    left: 0;
+    position: absolute;
+    width: 140px;
+    height: 50px;
+    background-image: radial-gradient(
+      hsla(var(--bc) / 0.2) 1.5px,
+      hsla(var(--b2) / 0) 1.5px
+    );
+    background-position: 0 0, 50px 50px;
+    background-size: 7px 7px;
+  }
+
+  .events {
+    display: grid;
+    grid-template-areas: 'event-large text text text' 'event-large . . .';
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 768px) {
+    .events {
+      grid-template-areas: 'text' 'event-large' 'event-small' 'event-small' 'event-small';
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 200px;
+    flex-grow: 1;
+  }
+</style>

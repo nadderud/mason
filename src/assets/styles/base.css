@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  /* This won't be included in your compiled CSS unless you actually use it */
+  .frontpage-hero-desktop {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+  }
+  .w-150 {
+    width: 150%;
+  }
+}

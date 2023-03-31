@@ -1,0 +1,68 @@
+---
+import Hero from '~/components/common/Hero.astro';
+import { SITE } from '~/config';
+import PageLayout from '~/layouts/PageLayout.astro';
+
+const posts = await Astro.glob('/src/pages/artikkler/*.md');
+
+const meta = {
+  title: SITE.title,
+  description: SITE.description,
+  dontUseTitleTemplate: true,
+};
+---
+
+<PageLayout {meta}>
+  <Hero
+    title='Artikler'
+    image='/img/upload/bål.jpeg'
+    description='Her kan du finne alle artiklene til Nadderud speidergruppe. Vi pleier ikke å publisere så ofte, og dette fungerer som et arkiv for årsmeldinger, årsmøter og lignende.'
+  />
+  <main>
+    <section class='p-10'>
+      {
+        posts
+          .sort(
+            (a, b) =>
+              new Date(String(b.frontmatter.date)).getTime() -
+              new Date(String(a.frontmatter.date)).getTime()
+          )
+          .map((post) => {
+            const { title, description, featuredimage, tags } =
+              post.frontmatter;
+            return (
+              <a class='card bg-base-100 shadow-xl' href={`${post.url}`}>
+                <figure class='h-52'>
+                  <img src={featuredimage || '/img/nsf.png'} alt='Shoes' />
+                </figure>
+                <div class='card-body'>
+                  <h2 class='card-title'>{title}</h2>
+                  <div class='flex gap-2'>
+                    {tags &&
+                      tags.map((tag) => {
+                        if (!/^$|^\.|\-$/.test(tag))
+                          return <span class='badge'>{tag}</span>;
+                      })}
+                  </div>
+                  <p>
+                    {String(description).slice(0, 100)}
+                    {description.length > 100 ? ' ...' : ''}
+                  </p>
+                </div>
+              </a>
+            );
+          })
+      }
+    </section>
+  </main>
+</PageLayout>
+
+<style>
+  section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+</style>

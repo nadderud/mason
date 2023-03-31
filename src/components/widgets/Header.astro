@@ -1,0 +1,78 @@
+---
+import Logo from '~/components/Logo.astro';
+import ToggleMenu from '~/components/common/ToggleMenu.astro';
+
+interface Link {
+  text?: string;
+  href?: string;
+  ariaLabel?: string;
+  icon?: string;
+}
+
+interface ActionLink extends Link {
+  type?: string;
+}
+
+interface MenuLink extends Link {
+  links?: Array<Link>;
+}
+
+export interface Props {
+  links?: Array<MenuLink>;
+}
+
+const { links = [] } = Astro.props;
+---
+
+<header class='navbar bg-base-100 max-w-6xl mx-auto sticky z-20' id='header'>
+    <div class='navbar-start'>
+      <a class='btn btn-ghost normal-case text-xl' href="/"> <Logo /></a>
+    </div>
+    <nav class='navbar-center hidden lg:flex'>
+      <ul class='menu menu-horizontal px-1'>
+        {
+          links.map(({ text, href, links }) => (
+            <li class={links?.length ? 'dropdown' : ''} tab-index={0}>
+              {links?.length ? (
+                <>
+                  <a>
+                    {text}
+                    <svg
+                      class='fill-current'
+                      xmlns='http://www.w3.org/2000/svg'
+                      width='20'
+                      height='20'
+                      viewBox='0 0 24 24'
+                    >
+                      <path d='M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z' />
+                    </svg>
+                  </a>
+                  <ul class="bg-base-100 shadow-lg">
+                    {links.map(({ text: text2, href: href2 }) => (
+                      <li>
+                        <a href={href2}>{text2}</a>
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              ) : (
+                <a
+                  class='font-medium hover:text-gray-900 px-4 py-3 flex items-center transition duration-150 ease-in-out'
+                  href={href}
+                >
+                  {text}
+                </a>
+              )}
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+    <div class='navbar-end'>
+      <a class='btn btn-primary' href="/bli-speider">Bli speider</a>
+      <div class='flex items-center lg:hidden'>
+        <ToggleMenu />
+      </div>
+    </div>
+
+</header>

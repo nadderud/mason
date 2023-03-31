@@ -1,0 +1,60 @@
+---
+---
+
+<script is:inline>
+
+    function attachEvent(selector, event, fn) {
+      const matches = typeof selector === 'string' ? document.querySelectorAll(selector) : selector;
+      if (matches && matches.length) {
+        matches.forEach((elem) => {
+          elem.addEventListener(event, (e) => fn(e, elem), false);
+        });
+      }
+    }
+  
+    window.onload = function () {
+      let lastKnownScrollPosition = window.scrollY;
+      let ticking = true;
+  
+      attachEvent('[data-aw-toggle-menu]', 'click', function (_, elem) {
+        elem.classList.toggle('expanded');
+        document.body.classList.toggle('overflow-hidden');
+        document.getElementById('header')?.classList.toggle('h-screen');
+        // document.querySelector('#header nav')?.classList.toggle('hidden');
+      });
+  
+      function appyHeaderStylesOnScroll() {
+        const header = document.getElementById('header');
+        if (lastKnownScrollPosition > 60 && !header.classList.contains('scroll')) {
+          document.getElementById('header').classList.add('scroll');
+        } else if (lastKnownScrollPosition <= 60 && header.classList.contains('scroll')) {
+          document.getElementById('header').classList.remove('scroll');
+        }
+        ticking = false;
+      }
+      appyHeaderStylesOnScroll();
+  
+      attachEvent([document], 'scroll', function () {
+        lastKnownScrollPosition = window.scrollY;
+  
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            appyHeaderStylesOnScroll();
+          });
+          ticking = true;
+        }
+      });
+    };
+  
+    window.onpageshow = function () {
+      document.documentElement.classList.add('motion-safe:scroll-smooth');
+      const elem = document.querySelector('[data-aw-toggle-menu]');
+      if (elem) {
+        elem.classList.remove('expanded');
+      }
+      document.body.classList.remove('overflow-hidden');
+      document.getElementById('header')?.classList.remove('h-screen');
+      document.querySelector('#header nav')?.classList.add('hidden');
+    };
+  </script>
+  

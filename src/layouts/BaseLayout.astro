@@ -1,0 +1,31 @@
+---
+import '~/assets/styles/base.css';
+
+import MetaTags from '~/components/common/MetaTags.astro';
+import BasicScripts from '~/components/common/BasicScripts.astro';
+import type { MetaSEO } from '../types';
+
+
+export interface Props {
+  meta?: MetaSEO;
+}
+
+const { meta = {} } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="no" data-theme="emerald" dir="auto" class="2xl:text-[20px]">
+  <head>
+    <MetaTags {...meta} />
+  </head>
+
+  <body>
+    <slot />
+    <BasicScripts />
+    <style is:global>
+      img {
+        content-visibility: auto;
+      }
+    </style>
+  </body>
+</html>
