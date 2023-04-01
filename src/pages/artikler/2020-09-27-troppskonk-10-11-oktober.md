@@ -1,5 +1,5 @@
 ---
-layout: '../../layouts/ArticleLayout.astro'
+layout: "../../layouts/ArticleLayout.astro"
 templateKey: blog-post
 title: Troppskonk 10.-11. oktober
 featuredimage: /img/upload/skjermbilde-2020-09-27-kl.-23.19.49.png
@@ -10,7 +10,8 @@ expireInDays: 39
 tags:
   - Troppen
 ---
-Bli med på den morsomme konkurransen om å bli årets flagg- eller bannerpatrulje! Vinnerpatruljen får æren av å heise flagget på Hosle skole den 17. mai. Håper gamle og nye speidere ønsker å være med! 
+
+Bli med på den morsomme konkurransen om å bli årets flagg- eller bannerpatrulje! Vinnerpatruljen får æren av å heise flagget på Hosle skole den 17. mai. Håper gamle og nye speidere ønsker å være med!
 
 Dato: 10.-11. oktober\
 For hvem: Alle i troppen\
@@ -22,29 +23,29 @@ På turen går vi i speiderskjerf(de som har)\
 \
 Forslag til pakkeliste:
 
-* Sovepose
-* Liggeunderlag
-* Uteligger/grevling (hvis du har)
-* Varm ullgenser (det blir kaldt om kvelden)
-* Ekstra par ullsokker
-* Lue, votter og skjerf
-* Ullundertøy
-* Undertøyskift
-* Toalettsaker
-* Ekstra skift
-* Regntøy
-* Kniv
-* Lommelykt
-* Fyrstikker
-* Kopp, tallerken og bestikk
-* Papir og blyant
-* Personlig førstehjelp
-* 3 brødmåltider
-* Middag som kan tilberedes på bål eller med varmt vann
-* Godteri til kvelden
-* Ublandet saft, ”Rett i koppen” e.l.
-* Vannflaske med vann
-* Haikebrett eller skjærefjøl (må være stor nok til at mat ikke faller på utsiden under matkonkurranse)
+- Sovepose
+- Liggeunderlag
+- Uteligger/grevling (hvis du har)
+- Varm ullgenser (det blir kaldt om kvelden)
+- Ekstra par ullsokker
+- Lue, votter og skjerf
+- Ullundertøy
+- Undertøyskift
+- Toalettsaker
+- Ekstra skift
+- Regntøy
+- Kniv
+- Lommelykt
+- Fyrstikker
+- Kopp, tallerken og bestikk
+- Papir og blyant
+- Personlig førstehjelp
+- 3 brødmåltider
+- Middag som kan tilberedes på bål eller med varmt vann
+- Godteri til kvelden
+- Ublandet saft, ”Rett i koppen” e.l.
+- Vannflaske med vann
+- Haikebrett eller skjærefjøl (må være stor nok til at mat ikke faller på utsiden under matkonkurranse)
 
 Peffen har ansvar for å ta med patruljeutstyr til konkurransen:\
 Kompass, kartlomme, presenning, oppvaskbørste, oppvasksåpe og tørkehåndkle, søppelsekk/poser til avfallssortering, surretau, primus/kokeapparat, sag/øks og patruljens førstehjelpsutstyr\

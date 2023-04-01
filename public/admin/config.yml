@@ -59,4 +59,3 @@ collections:
           - { label: Bilde, name: image, widget: image }
           - { label: Beskrivelse, name: description, widget: string }
           - { label: "Innhold", name: "body", widget: "markdown" }
-

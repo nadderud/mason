@@ -1,5 +1,5 @@
 ---
-layout: '../../layouts/ArticleLayout.astro'
+layout: "../../layouts/ArticleLayout.astro"
 templateKey: blog-post
 title: Avlysninger knyttet til koronaviruset
 featuredimage: /img/upload/hvitsteinvann.jpg
@@ -11,6 +11,7 @@ expireInDays: 60
 tags:
   - troppen flokken
 ---
+
 Alle planlagte møter og turer er avlyst inntil helsemyndighetene opphever vedtaket om forbud mot kultur- og idrettsarrangementer. Dette er innført som et tiltak for å begrense spredning av koronavirus i Norge.
 
 Både [Norges speiderforbund](https://speiding.no/nyhetsarkiv/viktig-informasjon) og [Vestmarka krets](https://vestmarka.speiding.no/anbefaling-rundt-speiding-og-korona/) har i dag gått ut med informasjon om at planlagte fysiske arrangementer avlyses og oppfordret gruppene til å gjøre det samme. Oppfordringen fra speiderforbundet gjelder alle fysiske samlinger til og med 30. april.

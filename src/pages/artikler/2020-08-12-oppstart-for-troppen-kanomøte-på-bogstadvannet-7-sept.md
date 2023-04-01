@@ -1,5 +1,5 @@
 ---
-layout: '../../layouts/ArticleLayout.astro'
+layout: "../../layouts/ArticleLayout.astro"
 templateKey: blog-post
 title: Oppstart for troppen, Kanomøte på Bogstadvannet, 7 sept
 featuredimage: /img/upload/happy-day.jpg
@@ -13,6 +13,7 @@ expireInDays: 60
 tags:
   - "-"
 ---
+
 Alle troppsmøter vil vare fra kl. 18.00 til kl. 19.30. De er satt til første mandagen i hver måned, og består av opplegg for alle patruljene i troppen. De resterende mandagene er holdt av til patruljemøter. Disse varer i én time, og er fra kl. 18.00-19.00. I starten av høsten vil vi prøve å avholde alle møter utendørs. Møtene vil være på speiderhuset i Øygardveien 49 eller et annet sted i nærområdet. Det betyr at det er viktig å følge med i terminlisten hvor troppen/patruljen skal være og ta på riktig klær.\
 \
 I tillegg til tropps- og patruljemøter skal vi selvfølgelig på tur denne høsten! Det arrangeres to turer for hele troppen, én tur for patruljeførere og assistenter, og patruljetur for hver patrulje. Følg med på terminlisten og hold av datoer. De fleste speiderne syns turene er det morsomste med speideren, så vi oppfordrer alle til å bli med på tur!\

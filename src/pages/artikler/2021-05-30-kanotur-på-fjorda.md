@@ -1,5 +1,5 @@
 ---
-layout: '../../layouts/ArticleLayout.astro'
+layout: "../../layouts/ArticleLayout.astro"
 templateKey: blog-post
 title: Kanotur på Fjorda!
 featuredimage: /img/upload/20190608_153548.jpg
@@ -11,11 +11,12 @@ expireInDays: 60
 tags:
   - troppen
 ---
+
 Oppmøte og sted: se arrangementet på Spond
 
-For å gjennomføre turen trenger vi både foreldre som kan kjøre og hente, samt en bil med hengerfeste til kano-hengeren. Gi beskjed hvis dere har ekstra plasser i bilen, slik at speidere som ønsker å bli med uten muligheten til å kjøre kan bli med. I tillegg kan du sende beskjed hvis dere har bil med hengerfeste og kan tenke å kjøre kanohengeren vår. 
+For å gjennomføre turen trenger vi både foreldre som kan kjøre og hente, samt en bil med hengerfeste til kano-hengeren. Gi beskjed hvis dere har ekstra plasser i bilen, slik at speidere som ønsker å bli med uten muligheten til å kjøre kan bli med. I tillegg kan du sende beskjed hvis dere har bil med hengerfeste og kan tenke å kjøre kanohengeren vår.
 
-Patruljeutstyr:  Kompass, presenning, surretau og patruljens førstehjelpsutstyr. Eventuelt primus (hvis dere vil). Ring utstyrsansvarlig Stian på telefon 911 28 204 for å avtale henting av utstyr.
+Patruljeutstyr: Kompass, presenning, surretau og patruljens førstehjelpsutstyr. Eventuelt primus (hvis dere vil). Ring utstyrsansvarlig Stian på telefon 911 28 204 for å avtale henting av utstyr.
 
 # !!!HUSK redningsvest!!!
 

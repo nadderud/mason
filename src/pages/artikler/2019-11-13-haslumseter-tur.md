@@ -1,5 +1,5 @@
 ---
-layout: '../../layouts/ArticleLayout.astro'
+layout: "../../layouts/ArticleLayout.astro"
 templateKey: blog-post
 title: Haslumseter-tur
 date: 2019-11-13T20:09:21.449Z

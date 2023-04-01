@@ -1,5 +1,5 @@
 ---
-layout: '../layouts/MarkdownPageLayout.astro'
+layout: "../layouts/MarkdownPageLayout.astro"
 title: Bli speider
 image: /img/upload/leirbaal.jpg
 description: >-

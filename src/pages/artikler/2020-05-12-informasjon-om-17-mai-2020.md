@@ -1,5 +1,5 @@
 ---
-layout: '../../layouts/ArticleLayout.astro'
+layout: "../../layouts/ArticleLayout.astro"
 templateKey: blog-post
 title: Informasjon om 17. mai 2020
 featuredimage: /img/upload/flagg2.jpg
@@ -11,6 +11,7 @@ expireInDays: 60
 tags:
   - alle
 ---
+
 Nadderud speidergruppe skal heise flagget på Hosle skole, men for å holde antall deltakere ved arrangementet lavt nok skal speideren kun stille med 10 personer. Det er derfor kun flaggpatruljen (Ekorn) og noen ledere som stiller. Dersom noen utover disse gjerne vil stille må det avklares direkte med Stian (911 28 204).
 
 Hele seansen ved flaggheis på Hosle skole blir streamet på nett, så det vil være mulig å følge den hjemmefra. Sendes på "17. mai på Hosle skole” på Facebook.

@@ -1,16 +1,16 @@
 export const headerData = {
   links: [
     {
-      text: 'Artikler',
-      href: '/artikler',
+      text: "Artikler",
+      href: "/artikler",
     },
     {
-      text: 'Program',
-      href: '/program',
+      text: "Program",
+      href: "/program",
     },
     {
-      text: 'Kontakt oss',
-      href: '/info',
+      text: "Kontakt oss",
+      href: "/info",
     },
   ],
 };

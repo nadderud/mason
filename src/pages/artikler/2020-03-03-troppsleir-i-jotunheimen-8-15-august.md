@@ -1,5 +1,5 @@
 ---
-layout: '../../layouts/ArticleLayout.astro'
+layout: "../../layouts/ArticleLayout.astro"
 templateKey: blog-post
 title: Troppsleir i Jotunheimen 8-15 august - Avlyst
 featuredimage: /img/upload/leir Jotunheimen.jpg
@@ -11,6 +11,7 @@ expireInDays: 150
 tags:
   - .nan
 ---
+
 Men vi må ikke glemme hvorfor vi har denne leiren. Prinsessen må reddes! Hun har fått en stor spillegjeld over hode, etter å ha gamblet med trollene. Nå frykter hun at trollene er ute etter henne, og derfor har hun har ansatt oss for å være hennes livvakter. Uheldigvis er det fortsatt lenge til leiren, og mye kan skje på den tid...\
 \
 Leiren varer fra fredag 8-15 august og vil være på Steinholet leirplass ved Sjoa, midt mellom Randsverk og Gjende.\

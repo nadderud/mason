@@ -1,5 +1,5 @@
 ---
-layout: '../../layouts/ArticleLayout.astro'
+layout: "../../layouts/ArticleLayout.astro"
 templateKey: blog-post
 title: Speideroverraskelse!
 featuredimage: /img/upload/sauejordet.jpg
@@ -28,6 +28,7 @@ expireInDays: 60
 tags:
   - .
 ---
+
 Vi minner om at det vil være viktig å ha to meters avstand, og vi håper derfor dere fordeler dere godt utover denne tiden. Dersom det blir mange på en gang får vi lage kø på parkeringsplassen:)
 
 Vi sees!

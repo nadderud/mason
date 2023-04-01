@@ -1,5 +1,5 @@
 ---
-layout: '../../layouts/ArticleLayout.astro'
+layout: "../../layouts/ArticleLayout.astro"
 templateKey: blog-post
 title: Speiding i koronatid
 featuredimage: /img/upload/sauejordet.jpg
@@ -11,6 +11,7 @@ expireInDays: 60
 tags:
   - "-"
 ---
+
 I den siste tiden har både Folkehelseinstituttet og Bærum kommune oppdatert sine koronainnstramninger. Norges speiderforbund har oppdatert sine retningslinjer i henhold til Fhi. Kommunen legger heldigvis ikke ytterligere føringer for aktiviteter for barn og unge,
 
 Vi kan fortsatt holde speidermøter, men vi ønsker at alle bruker eget utstyr så langt det er mulig, spriter hender og holder avstand så godt de kan.
@@ -31,6 +32,6 @@ Vi setter stor pris på det gode samarbeidet med dere denne perioden og håper p
 
 Bare ta kontakt dersom dere har spørsmål.
 
-Hilsen lederne for flokken, troppen og roverlaget. 
+Hilsen lederne for flokken, troppen og roverlaget.
 
 Merete Haukedal, gruppeleder

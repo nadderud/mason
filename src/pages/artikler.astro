@@ -6,8 +6,8 @@ import PageLayout from '~/layouts/PageLayout.astro';
 const posts = await Astro.glob('/src/pages/artikler/*.md');
 
 const meta = {
-  title: SITE.title,
-  description: SITE.description,
+  title: SITE.title + " - Artikler",
+  description: "Alle artiklene til Nadderud speidergruppe. Vi pleier ikke å publisere så ofte, og dette fungerer som et arkiv for årsmeldinger, årsmøter og lignende",
   dontUseTitleTemplate: true,
 };
 ---
@@ -19,7 +19,7 @@ const meta = {
     description='Her kan du finne alle artiklene til Nadderud speidergruppe. Vi pleier ikke å publisere så ofte, og dette fungerer som et arkiv for årsmeldinger, årsmøter og lignende.'
   />
   <main>
-    <section class='p-10'>
+    <section class='p-4'>
       {
         posts
           .sort(
@@ -33,7 +33,7 @@ const meta = {
             return (
               <a class='card bg-base-100 shadow-xl' href={`${post.url}`}>
                 <figure class='h-52'>
-                  <img src={featuredimage || '/img/nsf.png'} alt='Shoes' />
+                  <img src={featuredimage || '/img/nsf.png'} alt={`Bilde til artikel: ${title}`} loading="lazy" />
                 </figure>
                 <div class='card-body'>
                   <h2 class='card-title'>{title}</h2>
