@@ -15,7 +15,7 @@ collections:
     summary: "{{year}}-{{month}}-{{day}}: {{title}}"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - { name: "templateKey", widget: "hidden", default: "blog-post" }
+      - { name: "layout", widget: "hidden", default: "../../layouts/ArticleLayout.astro" }
       - { label: "Tittel", name: "title", widget: "string" }
       - { label: "Bilde", name: "featuredimage", widget: image }
       - {
