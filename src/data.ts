@@ -5,6 +5,10 @@ export const headerData = {
       href: "/artikler",
     },
     {
+      text: "Wiki",
+      href: "/wiki",
+    },
+    {
       text: "Program",
       href: "/program",
     },
