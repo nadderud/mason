@@ -31,7 +31,7 @@ const events = rawEvents.slice(0,4)
         style={`grid-area:${i === 0 ? 'event-large' : ''}`}
         class='h-full flex flex-col'
       >
-        <img class='bg-base-200 object-cover' src={event.picture || "/img/upload/vann.jpg"} />
+        <img class='bg-base-200 object-cover' src={event.picture || "/img/upload/vann.jpg"} alt={`Bilde til ${event.heading}`} loading="lazy"  />
         <p>{new Date(event.startTimestamp).toLocaleDateString("no-NO", {day: "2-digit", weekday: "short", month: "long"})}</p>
         <h3 class="font-bold">{event.heading}</h3>
       </div>
