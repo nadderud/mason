@@ -3,7 +3,7 @@ import Hero from '~/components/common/Hero.astro';
 import { SITE } from '~/config';
 import PageLayout from '~/layouts/PageLayout.astro';
 
-const posts = await Astro.glob('/src/pages/artikkler/*.md');
+const posts = await Astro.glob('/src/pages/artikler/*.md');
 
 const meta = {
   title: SITE.title,

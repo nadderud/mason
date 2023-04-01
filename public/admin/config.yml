@@ -39,18 +39,6 @@ collections:
 
   - name: "pages"
     label: "Sider"
-    files:
-      - file: "src/pages/index.md"
-        label: "Forsiden"
-        delete: false
-        name: "index"
-        fields:
-          - { name: "templateKey", widget: "hidden", default: "index" }
-          - { label: Tittel, name: title, widget: string }
-          - { label: Bilde, name: image, widget: image }
-          - { label: Beskrivelse, name: description, widget: string }
-          - { label: "Instagram brukernavn", name: instagram, widget: string }
-
       - file: "src/pages/info.md"
         label: "Informasjon"
         name: "info"
