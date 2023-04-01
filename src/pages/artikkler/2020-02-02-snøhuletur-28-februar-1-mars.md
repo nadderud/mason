@@ -1,4 +1,5 @@
 ---
+layout: '../../layouts/ArticleLayout.astro'
 templateKey: blog-post
 title: Snøhuletur 28. februar - 1. mars
 date: 2020-02-02T06:43:00.367Z

@@ -1,4 +1,5 @@
 ---
+layout: '../../layouts/ArticleLayout.astro'
 templateKey: blog-post
 title: Avlysninger knyttet til koronaviruset
 featuredimage: /img/upload/hvitsteinvann.jpg

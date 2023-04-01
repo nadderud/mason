@@ -1,4 +1,5 @@
 ---
+layout: '../../layouts/ArticleLayout.astro'
 templateKey: blog-post
 title: Troppskonk 10.-11. oktober
 featuredimage: /img/upload/skjermbilde-2020-09-27-kl.-23.19.49.png

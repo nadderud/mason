@@ -1,4 +1,5 @@
 ---
+layout: '../../layouts/ArticleLayout.astro'
 templateKey: blog-post
 title: Oppstart for troppen, Kanomøte på Bogstadvannet, 7 sept
 featuredimage: /img/upload/happy-day.jpg

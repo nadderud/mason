@@ -1,4 +1,5 @@
 ---
+layout: '../../layouts/ArticleLayout.astro'
 templateKey: blog-post
 title: Flokk-tur til Lomma 19.-20. oktober
 date: 2019-10-11T14:58:17.793Z

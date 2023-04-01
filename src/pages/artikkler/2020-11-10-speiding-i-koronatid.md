@@ -1,4 +1,5 @@
 ---
+layout: '../../layouts/ArticleLayout.astro'
 templateKey: blog-post
 title: Speiding i koronatid
 featuredimage: /img/upload/sauejordet.jpg

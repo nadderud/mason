@@ -1,4 +1,5 @@
 ---
+layout: '../../layouts/ArticleLayout.astro'
 templateKey: blog-post
 title: Nye koronarestriksjoner
 featuredimage: /img/upload/gråmagan.jpg

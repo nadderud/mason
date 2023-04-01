@@ -1,4 +1,5 @@
 ---
+layout: '../../layouts/ArticleLayout.astro'
 templateKey: blog-post
 title: God Jul og Godt nytt år
 featuredimage: /img/upload/nisser.jpg

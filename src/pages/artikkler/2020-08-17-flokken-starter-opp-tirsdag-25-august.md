@@ -1,4 +1,5 @@
 ---
+layout: '../../layouts/ArticleLayout.astro'
 templateKey: blog-post
 title: Flokken starter opp tirsdag 25. august
 featuredimage: /img/upload/spikking.jpg

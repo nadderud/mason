@@ -1,4 +1,5 @@
 ---
+layout: '../../layouts/ArticleLayout.astro'
 templateKey: blog-post
 title: Nissefest på speiderhuset mandag 16. desember
 date: 2019-12-01T18:51:04.465Z

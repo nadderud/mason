@@ -1,4 +1,5 @@
 ---
+layout: '../../layouts/ArticleLayout.astro'
 templateKey: blog-post
 title: Spire chiafrø
 featuredimage: /img/upload/chiafrø.jpeg

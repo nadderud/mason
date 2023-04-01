@@ -1,4 +1,5 @@
 ---
+layout: '../../layouts/ArticleLayout.astro'
 templateKey: blog-post
 title: mandeljakten
 featuredimage: /img/upload/nisser.jpg

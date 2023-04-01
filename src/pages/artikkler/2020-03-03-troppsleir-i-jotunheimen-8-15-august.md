@@ -1,4 +1,5 @@
 ---
+layout: '../../layouts/ArticleLayout.astro'
 templateKey: blog-post
 title: Troppsleir i Jotunheimen 8-15 august - Avlyst
 featuredimage: /img/upload/leir Jotunheimen.jpg

@@ -1,4 +1,5 @@
 ---
+layout: '../../layouts/ArticleLayout.astro'
 templateKey: blog-post
 title: Kanotur på Fjorda!
 featuredimage: /img/upload/20190608_153548.jpg

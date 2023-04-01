@@ -1,4 +1,5 @@
 ---
+layout: '../../layouts/ArticleLayout.astro'
 templateKey: blog-post
 title: Velkommen til et nytt speidersemester og godt nytt år!
 date: 2020-01-16T21:31:20.623Z

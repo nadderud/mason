@@ -1,4 +1,5 @@
 ---
+layout: '../../layouts/ArticleLayout.astro'
 templateKey: blog-post
 title: Årsmøte 8. juni på Speiderhuset
 featuredimage: /img/upload/leirbaal.jpg

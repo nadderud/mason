@@ -13,27 +13,23 @@ export interface Props {
 }
 
 const { meta, frontmatter } = Astro.props;
+
 ---
 
 <Layout {meta}>
-  <slot name='announcement'>
+  <slot name="announcement">
     <Announcement />
   </slot>
-  <slot name='header'>
+  <slot name="header">
     <Header {...headerData} />
   </slot>
-  <main class='bg-base-100'>
-    {frontmatter && frontmatter.image ? <Hero {...frontmatter} /> : null}
-    <article class='prose max-w-2xl mx-auto p-4'>
-      {
-        frontmatter && !frontmatter.image && frontmatter.title ? (
-          <h1 class='pt-10'>{frontmatter.title}</h1>
-        ) : null
-      }
-      <slot />
+  <main class="bg-base-100">
+    <Hero image={frontmatter.featuredimage} title={frontmatter.title} />
+    <article class="prose max-w-2xl mx-auto p-4" >
+        <slot />
     </article>
   </main>
-  <slot name='footer'>
+  <slot name="footer">
     <Footer />
   </slot>
 </Layout>

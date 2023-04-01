@@ -1,4 +1,5 @@
 ---
+layout: '../../layouts/ArticleLayout.astro'
 templateKey: blog-post
 title: Årets hjulskiftaksjon!
 featuredimage: /img/upload/hjulskift.jpg

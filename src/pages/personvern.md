@@ -1,4 +1,5 @@
 ---
+layout: '../layouts/MarkdownPageLayout.astro'
 date: 2020-03-22T11:04:00.000Z
 title: Personvern
 description: "Personvernerklæring som beskriver hvordan vi behandler dine personopplysninger."

@@ -1,4 +1,5 @@
 ---
+layout: '../../layouts/ArticleLayout.astro'
 templateKey: blog-post
 title: Troppskonk 19-20 oktober
 featuredimage: /img/upload/20181013_122906.jpg

@@ -1,4 +1,5 @@
 ---
+layout: '../../layouts/ArticleLayout.astro'
 templateKey: blog-post
 title: Gratulerer med dagen alle speidere!
 featuredimage: /img/upload/flaggborg.jpg

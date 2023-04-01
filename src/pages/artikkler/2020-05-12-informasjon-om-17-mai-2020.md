@@ -1,4 +1,5 @@
 ---
+layout: '../../layouts/ArticleLayout.astro'
 templateKey: blog-post
 title: Informasjon om 17. mai 2020
 featuredimage: /img/upload/flagg2.jpg

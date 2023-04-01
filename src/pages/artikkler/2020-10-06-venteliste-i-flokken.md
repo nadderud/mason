@@ -1,4 +1,5 @@
 ---
+layout: '../../layouts/ArticleLayout.astro'
 templateKey: blog-post
 title: Venteliste i flokken
 featuredimage: /img/upload/pionering.jpg

@@ -1,4 +1,5 @@
 ---
+layout: '../../layouts/ArticleLayout.astro'
 templateKey: blog-post
 title: Minileir sommer 2020 ved Farris!
 featuredimage: /img/upload/20190608_153548.jpg

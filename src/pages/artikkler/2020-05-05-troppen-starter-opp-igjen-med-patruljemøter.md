@@ -1,4 +1,5 @@
 ---
+layout: '../../layouts/ArticleLayout.astro'
 templateKey: blog-post
 title: Troppen starter opp igjen med patruljemøter!
 featuredimage: /img/upload/happy-day.jpg
