@@ -39,6 +39,7 @@ collections:
 
   - name: "pages"
     label: "Sider"
+    files:
       - file: "src/pages/info.md"
         label: "Informasjon"
         name: "info"
