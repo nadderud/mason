@@ -32,7 +32,12 @@ const { meta, frontmatter } = Astro.props;
         <article class='prose'>
           {
             frontmatter && frontmatter.title ? (
-              <h1 class='pt-10'>{frontmatter.title}</h1>
+              <h1 class='pt-4'>{frontmatter.title}</h1>
+            ) : null
+          }
+          {
+            frontmatter && frontmatter.description ? (
+              <p>{frontmatter.description}</p>
             ) : null
           }
           <slot />

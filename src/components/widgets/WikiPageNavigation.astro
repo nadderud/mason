@@ -3,8 +3,10 @@ const wikiPages = await Astro.glob('/src/pages/wiki/*.md');
 ---
 
 <div class="w-80 bg-base-200 p-2">
-  <h3 class="text-lg font-semibold text-center mt-2">Alle wiki sidene</h3>
-  <ul class='menu p-4  text-base-content'>
+  <ul class='menu p-4  text-base-content menu-compact'>
+    <li>
+      <a href="/wiki">Wiki forside</a>
+    </li>
     {
       wikiPages.map((page) => {
         const { title } = page.frontmatter;
