@@ -8,6 +8,7 @@ import Announcement from '~/components/widgets/Announcement.astro';
 
 import { headerData } from '~/data';
 import Hero from '~/components/common/Hero.astro';
+import PageLayout from './PageLayout.astro';
 
 type Props = MarkdownLayoutProps<{
   // Define frontmatter props here
@@ -17,27 +18,16 @@ type Props = MarkdownLayoutProps<{
   featuredimage: string;
   expireInDays: number;
   tags: string[];
-
 }>;
 
 const { frontmatter } = Astro.props;
-
 ---
 
-<Layout meta={{title: frontmatter.title, description: frontmatter.description}}>
-  <slot name="announcement">
-    <Announcement />
-  </slot>
-  <slot name="header">
-    <Header {...headerData} />
-  </slot>
-  <main class="bg-base-100">
-    <Hero image={frontmatter.featuredimage} title={frontmatter.title} />
-    <article class="prose max-w-2xl mx-auto p-4" >
-        <slot />
-    </article>
-  </main>
-  <slot name="footer">
-    <Footer />
-  </slot>
-</Layout>
+<PageLayout
+  meta={{ title: frontmatter.title, description: frontmatter.description, image: frontmatter.featuredimage }}
+>
+  <Hero image={frontmatter.featuredimage} title={frontmatter.title} />
+  <article class='prose max-w-2xl mx-auto p-4'>
+    <slot />
+  </article>
+</PageLayout>

@@ -8,6 +8,7 @@ import Announcement from '~/components/widgets/Announcement.astro';
 
 import { headerData } from '~/data';
 import Hero from '~/components/common/Hero.astro';
+import PageLayout from './PageLayout.astro';
 
 type Props = MarkdownLayoutProps<{
   // Define frontmatter props here
@@ -20,25 +21,16 @@ type Props = MarkdownLayoutProps<{
 const { frontmatter } = Astro.props;
 ---
 
-<Layout meta={{title: frontmatter.title, description: frontmatter.description}}>
-  <slot name='announcement'>
-    <Announcement />
-  </slot>
-  <slot name='header'>
-    <Header {...headerData} />
-  </slot>
-  <main class='bg-base-100'>
-    {frontmatter && frontmatter.image ? <Hero {...frontmatter} /> : null}
-    <section class='prose max-w-2xl mx-auto p-4'>
-      {
-        frontmatter && !frontmatter.image && frontmatter.title ? (
-          <h1 class='pt-10'>{frontmatter.title}</h1>
-        ) : null
-      }
-      <slot />
-    </section>
-  </main>
-  <slot name='footer'>
-    <Footer />
-  </slot>
-</Layout>
+<PageLayout
+  meta={{ title: frontmatter.title, description: frontmatter.description, image: frontmatter.image }}
+>
+  {frontmatter && frontmatter.image ? <Hero {...frontmatter} /> : null}
+  <section class='prose max-w-2xl mx-auto p-4'>
+    {
+      frontmatter && !frontmatter.image && frontmatter.title ? (
+        <h1 class='pt-10'>{frontmatter.title}</h1>
+      ) : null
+    }
+    <slot />
+  </section>
+</PageLayout>

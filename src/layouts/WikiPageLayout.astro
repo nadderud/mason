@@ -24,7 +24,7 @@ const { frontmatter } = Astro.props;
 
 ---
 
-<Layout meta={{title: frontmatter.title, description: frontmatter.description}}>
+<Layout meta={{title: frontmatter.title, description: frontmatter.description }}>
   <slot name='announcement'>
     <Announcement />
   </slot>

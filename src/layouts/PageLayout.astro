@@ -21,7 +21,7 @@ const { meta } = Astro.props;
   <slot name="header">
     <Header {...headerData} />
   </slot>
-  <main class="bg-base-100">
+  <main class="bg-base-100 grow flex flex-col">
     <slot />
   </main>
   <slot name="footer">

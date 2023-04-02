@@ -19,7 +19,7 @@ const { meta = {} } = Astro.props;
     <MetaTags {...meta} />
   </head>
 
-  <body>
+  <body class="min-h-screen flex flex-col">
     <slot />
     <BasicScripts />
     <style is:global>
