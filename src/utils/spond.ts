@@ -36,8 +36,13 @@ export const getEvents = async (groupId: string) => {
 };
 
 export const getEventsFromSelectedGroups = async (groupIds: string[]) => {
-  const allEvents = await Promise.all(
-    groupIds.map((groupId) => getEvents(groupId))
-  );
-  return allEvents.flat();
+  try {
+    const allEvents = await Promise.all(
+      groupIds.map((groupId) => getEvents(groupId))
+    );
+    return allEvents.flat();
+  } catch (error) {
+    console.error("Error fetching events from Spond", error);
+    return [];
+  }
 };
