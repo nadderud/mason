@@ -1,4 +1,6 @@
 ---
+import type { MarkdownLayoutProps } from 'astro';
+
 import Layout from '~/layouts/BaseLayout.astro';
 import Header from '~/components/widgets/Header.astro';
 import Footer from '~/components/widgets/Footer.astro';
@@ -6,6 +8,17 @@ import Announcement from '~/components/widgets/Announcement.astro';
 
 import { headerData } from '~/data';
 import Hero from '~/components/common/Hero.astro';
+
+type Props = MarkdownLayoutProps<{
+  // Define frontmatter props here
+  title: string;
+  date: string;
+  description: string;
+  featuredimage: string;
+  expireInDays: number;
+  tags: string[];
+
+}>;
 
 const { frontmatter } = Astro.props;
 

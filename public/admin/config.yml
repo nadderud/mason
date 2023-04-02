@@ -77,9 +77,6 @@ collections:
           - { label: "Bilde", name: "image", widget: image }
           - { label: Beskrivelse, name: description, widget: string }
           - { label: "Innhold", name: "body", widget: "markdown" }
-          - { label: "Publisert dato", name: "createdDate", widget: "datetime" }
-          - { label: "Oppdatert dato", name: "updatedDate", widget: "datetime" }
-          - { label: "Tagger", name: "tags", widget: "list" }
 
   - name: "wiki"
     label: "Wiki undersider"
