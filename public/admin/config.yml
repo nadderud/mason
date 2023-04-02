@@ -45,6 +45,7 @@ collections:
         name: "forside"
         delete: false
         fields:
+          - { name: "layout", widget: "hidden", default: "../layouts/FrontpageLayout.astro" }
           - { label: "slagord", name: "slagord", widget: "string" }
           - { label: "featuredImage", name: "featuredImage", widget: image }
           - { label: Beskrivelse, name: description, widget: string }
@@ -58,6 +59,7 @@ collections:
         name: "info"
         delete: false
         fields:
+          - { name: "layout", widget: "hidden", default: "../layouts/MarkdownPageLayout.astro"}
           - { label: Tittel, name: "title", widget: "string" }
           - { label: Bilde, name: image, widget: image }
           - { label: Beskrivelse, name: description, widget: string }
@@ -68,6 +70,7 @@ collections:
         name: "bli-speider"
         delete: false
         fields:
+          - { name: "layout", widget: "hidden", default: "../layouts/MarkdownPageLayout.astro"}
           - { label: Tittel, name: "title", widget: "string" }
           - { label: Bilde, name: image, widget: image }
           - { label: Beskrivelse, name: description, widget: string }
@@ -77,6 +80,7 @@ collections:
         name: "program"
         delete: false
         fields:
+          - { name: "layout", widget: "hidden", default: "../layouts/MarkdownPageLayout.astro"}
           - { label: Tittel, name: "title", widget: "string" }
           - { label: Bilde, name: image, widget: image }
           - { label: Beskrivelse, name: description, widget: string }
@@ -86,6 +90,7 @@ collections:
         name: "wiki"
         delete: false
         fields:
+          - { name: "layout", widget: "hidden", default: "../layouts/WikiPageLayout.astro"}
           - { label: "Tittel", name: "title", widget: "string" }
           - { label: "Bilde", name: "image", widget: image }
           - { label: Beskrivelse, name: description, widget: string }
