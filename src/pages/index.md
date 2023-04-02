@@ -1,4 +1,5 @@
 ---
+layout: "../layouts/FrontpageLayout.astro"
 slagord: 'Friluft, mestring og samhold!'
 featuredImage: /img/upload/leirbaal.jpg
 description: >-
@@ -23,4 +24,3 @@ roverText: >-
   mye spennende. Vi hjelper til med å planlegge og gjennomføre arrangementer,
   leirer, vi har møter og vi har mye moro sammen.
 ---
-
