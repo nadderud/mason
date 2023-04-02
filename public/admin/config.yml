@@ -88,7 +88,6 @@ collections:
     fields:
       - { name: "layout", widget: "hidden", default: "../../layouts/WikiPageLayout.astro" }
       - { label: "Tittel", name: "title", widget: "string" }
-      - { label: "Bilde", name: "image", widget: image }
       - { label: Beskrivelse, name: description, widget: string }
       - { label: "Innhold", name: "body", widget: "markdown" }
       - { label: "Publisert dato", name: "createdDate", widget: "datetime" }
