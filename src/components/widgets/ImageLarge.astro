@@ -8,7 +8,7 @@ export interface Props {
 const { title, src, alt } = Astro.props;
 ---
 
-<section>
+<section id="large-image">
     <h3 class="text-3xl tracking-tight font-bold md:text-4xl md:w-150 z-10">{title}</h3>
     <img src={src} alt={alt || title} class="bg-base-200" />
 </section>

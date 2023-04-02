@@ -12,10 +12,10 @@ export interface Props {
   meta?: MetaSEO;
 }
 
-const { meta, frontmatter } = Astro.props;
+const { frontmatter } = Astro.props;
 ---
 
-<Layout {meta}>
+<Layout meta={{title: frontmatter.title, description: frontmatter.description}}>
   <slot name='announcement'>
     <Announcement />
   </slot>
@@ -27,7 +27,7 @@ const { meta, frontmatter } = Astro.props;
       <input id='my-drawer-2' type='checkbox' class='drawer-toggle' />
       <div class='drawer-content p-4'>
         <label for='my-drawer-2' class='btn btn-primary drawer-button lg:hidden'
-          >Se alle wiki sider</label
+          >Utforsk WIKIen</label
         >
         <article class='prose'>
           {

@@ -4,19 +4,14 @@ import Header from '~/components/widgets/Header.astro';
 import Footer from '~/components/widgets/Footer.astro';
 import Announcement from '~/components/widgets/Announcement.astro';
 
-import type { MetaSEO } from '~/types';
 import { headerData } from '~/data';
 import Hero from '~/components/common/Hero.astro';
 
-export interface Props {
-  meta?: MetaSEO;
-}
-
-const { meta, frontmatter } = Astro.props;
+const { frontmatter } = Astro.props;
 
 ---
 
-<Layout {meta}>
+<Layout meta={{title: frontmatter.title, description: frontmatter.description}}>
   <slot name="announcement">
     <Announcement />
   </slot>
