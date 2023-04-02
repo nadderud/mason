@@ -40,6 +40,19 @@ collections:
   - name: "pages"
     label: "Sider"
     files:
+      - file: "src/pages/index.md"
+        label: "Forsiden"
+        name: "forside"
+        delete: false
+        fields:
+          - { label: "slagord", name: "slagord", widget: "string" }
+          - { label: "featuredImage", name: "featuredImage", widget: image }
+          - { label: Beskrivelse, name: description, widget: string }
+          - { label: "Arrangementer tekst", name: "eventText", widget: "string" }
+          - { label: "Speider er spennende bilde", name: "largeImage", widget: "image" }
+          - { label: "Flokken tekst", name: "flokkenText", widget: "string" }
+          - { label: "Troppen tekst", name: "troppenText", widget: "string" }
+          - { label: "Rover tekst", name: "roverText", widget: "string" }
       - file: "src/pages/info.md"
         label: "Informasjon"
         name: "info"

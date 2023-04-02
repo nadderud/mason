@@ -1,4 +1,11 @@
 ---
+export interface Props {
+  slagord: string;
+  description: string;
+  featuredImage: string;
+}
+
+const { slagord, description, featuredImage } = Astro.props;
 ---
 
 <section id="hero" class='hero-section'>
@@ -6,15 +13,13 @@
     class='text-4xl tracking-tight md:text-5xl md:w-150 z-10 pt-12'
     style='grid-area: title;'
   >
-    Friluft, mestring og samhold!
+    {slagord}
   </h1>
   <p class='hero-text' style='grid-area: text;'>
-    Spennende friluftsliv for barn og ungdom fra 3. klasse og oppover. Vi er en
-    aktiv speidergruppe med ca. 100 medlemmer som dekker området Nadderud,
-    Bekkestua, Hosle, Eikeli og Haslum.
+    {description}
   </p>
   <img
-    src='/img/upload/leirbaal.jpg'
+    src={featuredImage}
     class='aspect-square object-cover image'
     alt='Astro'
     style='grid-area: image;'

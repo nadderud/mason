@@ -1,0 +1,46 @@
+---
+import type { MarkdownLayoutProps } from 'astro';
+
+import PageLayout from './PageLayout.astro';
+import { SITE } from '~/config';
+import FrontpageHero from '~/components/widgets/FrontpageHero.astro';
+import FrontpageEvents from '~/components/widgets/FrontpageEvents.astro';
+import ImageLarge from '~/components/widgets/ImageLarge.astro';
+import WhoCanJoinInfo from '~/components/widgets/WhoCanJoinInfo.astro';
+import JoinScoutGroup from '~/components/widgets/JoinScoutGroup.astro';
+
+type Props = MarkdownLayoutProps<{
+  // Define frontmatter props here
+  slagord: string;
+  featuredImage: string;
+  description: string;
+  eventText: string;
+  largeImage: string;
+  flokkenText: string;
+  troppenText: string;
+  roverText: string;
+}>;
+
+const { frontmatter } = Astro.props;
+
+const meta = {
+  title: SITE.title,
+  description: SITE.description,
+  dontUseTitleTemplate: true,
+};
+---
+
+<PageLayout {meta}>
+  <FrontpageHero slagord={frontmatter.slagord} description={frontmatter.description} featuredImage={frontmatter.featuredImage} />
+  <FrontpageEvents description={frontmatter.eventText} />
+  <ImageLarge
+    title='Speiding er spennende og gir venner for livet!'
+    src={frontmatter.largeImage}
+    alt='Speiding er spennende og gir venner for livet!'
+    >
+  </ImageLarge>
+  <WhoCanJoinInfo texts={[frontmatter.flokkenText, frontmatter.troppenText, frontmatter.roverText]} />
+  <JoinScoutGroup />
+  <slot />
+</PageLayout>
+
