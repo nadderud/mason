@@ -8,21 +8,28 @@ export interface Props {
 const { selectedPage } = Astro.props;
 ---
 
-<nav class="w-80 bg-base-200 p-2">
-  <ul class='menu p-4  text-base-content menu-compact'>
-    <li>
-      <a href="/wiki">Wiki forside</a>
-    </li>
-    {
-      wikiPages.map((page) => {
-        const { title } = page.frontmatter;
 
-        return (
-          <li>
-            <a class={`${selectedPage === page.frontmatter.title ? "active" : ""} `} href={page.url}>{title}</a>
-          </li>
-        );
-      })
-    }
-  </ul>
-</nav>
+<div tabindex="0" class="collapse collapse-plus border border-base-300 bg-base-100 rounded-box w-96 mx-auto">
+  <input type="checkbox" /> 
+  <div class="collapse-title text-xl font-medium">
+    Utforsk innholdet i wikien
+  </div>
+  <div class="collapse-content"> 
+    <ul class='menu p-4  text-base-content menu-compact'>
+      <li>
+        <a href="/wiki">Wiki forside</a>
+      </li>
+      {
+        wikiPages.map((page) => {
+          const { title } = page.frontmatter;
+  
+          return (
+            <li>
+              <a class={`${selectedPage === page.frontmatter.title ? "active" : ""} `} href={page.url}>{title}</a>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </div>
+</div>
