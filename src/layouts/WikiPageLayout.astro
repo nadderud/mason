@@ -1,9 +1,6 @@
 ---
 import type { MarkdownLayoutProps } from 'astro';
 
-import WikiPageNavigation from '~/components/widgets/WikiPageNavigation.astro';
-import PageLayout from './PageLayout.astro';
-
 type Props = MarkdownLayoutProps<{
   // Define frontmatter props here
   title: string;
@@ -14,15 +11,50 @@ type Props = MarkdownLayoutProps<{
 }>;
 
 const { frontmatter } = Astro.props;
+
+import Layout from '~/layouts/BaseLayout.astro';
+import Header from '~/components/widgets/Header.astro';
+import Footer from '~/components/widgets/Footer.astro';
+import Announcement from '~/components/widgets/Announcement.astro';
+
+import type { MetaSEO } from '~/types';
+import { headerData } from '~/data';
+import WikiPageNavigation from '~/components/widgets/WikiPageNavigation.astro';
+
+const meta: MetaSEO = {
+  title: frontmatter.title,
+  description: frontmatter.description,
+};
 ---
 
-<PageLayout
-  meta={{ title: frontmatter.title, description: frontmatter.description }}
->
-
-  <WikiPageNavigation selectedPage={frontmatter.title} />
-  <article class='prose w-full mx-auto'>
-    <slot />
-  </article>
-
-</PageLayout>
+<Layout {meta}>
+  <slot name="announcement">
+    <Announcement />
+  </slot>
+  <slot name="header">
+    <Header {...headerData} />
+  </slot>
+  <div class="drawer drawer-mobile h-full grow">
+    <input id="my-drawer-3" type="checkbox" class="drawer-toggle" /> 
+    <main class="drawer-content flex flex-col">
+       
+      <label for="my-drawer-3" class="btn gap-3 m-3 lg:hidden">
+        Utforsk Wiki
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-6 h-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      </label>
+      <article class="p-5 max-w-xl">
+        <h1 class="text-3xl tracking-tight font-bold md:text-4xl md:w-150">{frontmatter.title}</h1>
+        <p class="italic py-2">{frontmatter.description}</p>
+        <hr class="py-2">
+      <slot />
+    </article>
+    </main> 
+    <div class="drawer-side" style="max-height: 100%;">
+      <label for="my-drawer-3" class="drawer-overlay"></label> 
+      <WikiPageNavigation selectedPage={frontmatter.title} />
+    </div>
+  </div>
+  <slot name="footer">
+    <Footer />
+  </slot>
+</Layout>
