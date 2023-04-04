@@ -34,7 +34,7 @@ const meta: MetaSEO = {
   <slot name="header">
     <Header {...headerData} />
   </slot>
-  <div class="drawer drawer-mobile h-full grow">
+  <div class="drawer drawer-mobile h-auto grow">
     <input id="my-drawer-3" type="checkbox" class="drawer-toggle" /> 
     <main class="drawer-content flex flex-col">
        
@@ -42,10 +42,10 @@ const meta: MetaSEO = {
         Utforsk Wiki
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-6 h-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
       </label>
-      <article class="p-5 max-w-xl">
-        <h1 class="text-3xl tracking-tight font-bold md:text-4xl md:w-150">{frontmatter.title}</h1>
-        <p class="italic py-2">{frontmatter.description}</p>
-        <hr class="py-2">
+      <article class="prose p-5 max-w-xl">
+        <h1>{frontmatter.title}</h1>
+        <p class="italic">{frontmatter.description}</p>
+        <hr class="my-1">
       <slot />
     </article>
     </main> 
