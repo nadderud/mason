@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/WikiPageLayout.astro
-title: Testside
+title: Testside!
 description: Dette er en testside for å se vise hvordan WIKIen fungerer
 createdDate: '2023-04-19T00:00:00+02:00'
 updatedDate: '2023-04-01T00:00:00+02:00'
