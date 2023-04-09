@@ -5,6 +5,8 @@ backend:
 media_folder: public/img/upload
 public_folder: /img/upload
 
+logo_url: /img/admin_logo.png
+
 collections:
   - name: "artikler"
     label: "Artikler"

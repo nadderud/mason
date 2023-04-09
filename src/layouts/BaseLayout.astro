@@ -5,7 +5,6 @@ import MetaTags from '~/components/common/MetaTags.astro';
 import BasicScripts from '~/components/common/BasicScripts.astro';
 import type { MetaSEO } from '../types';
 
-
 export interface Props {
   meta?: MetaSEO;
 }
@@ -14,12 +13,16 @@ const { meta = {} } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="no" data-theme="emerald" dir="auto" class="2xl:text-[20px]">
+<html lang='no' data-theme='emerald' dir='auto' class='2xl:text-[20px]'>
   <head>
     <MetaTags {...meta} />
+    <script
+      src='https://identity.netlify.com/v1/netlify-identity-widget.js'
+      is:inline
+    ></script>
   </head>
 
-  <body class="min-h-screen flex flex-col">
+  <body class='min-h-screen flex flex-col'>
     <slot />
     <BasicScripts />
     <style is:global>
