@@ -3,7 +3,6 @@ import { AstroSeo } from '@astrolib/seo';
 import type { MetaSEO } from '~/types';
 import { SITE } from '~/config';
 import { getCanonical } from '~/utils/permalinks';
-import { getRelativeUrlByFilePath } from '~/utils/directories';
 
 export interface Props extends MetaSEO {
   dontUseTitleTemplate?: boolean;
@@ -31,7 +30,7 @@ const image =
     ? new URL(_image, Astro.site)
     : _image && typeof _image['src'] !== 'undefined'
     ? //@ts-ignore
-      new URL(getRelativeUrlByFilePath(_image.src), Astro.site)
+      SITE.url + SITE.defaultImagec
     : null;
 ---
 
