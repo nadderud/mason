@@ -1,7 +1,6 @@
 import path from "path";
 import { fileURLToPath } from "url";
 import { defineConfig } from "astro/config";
-import image from "@astrojs/image";
 import compress from "astro-compress";
 import { SITE } from "./src/config.ts";
 import netlify from '@astrojs/netlify/edge-functions';
@@ -15,9 +14,6 @@ export default defineConfig({
   output: "server",
   adapter: netlify(),
   integrations: [
-    image({
-      serviceEntryPoint: "@astrojs/image/sharp",
-    }),
     compress({
       css: true,
       html: {
