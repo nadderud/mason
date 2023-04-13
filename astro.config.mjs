@@ -9,7 +9,9 @@ export default defineConfig({
   base: SITE.basePathname,
   trailingSlash: "never",
   output: "server",
-  adapter: netlify(),
+  adapter: netlify({
+    builders: true,
+  }),
   integrations: [
     compress({
       css: true,
