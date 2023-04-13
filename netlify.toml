@@ -8,3 +8,6 @@
   for = "/admin/*"
   [headers.values]
     X-Robots-Tag = "noindex"
+
+[functions]
+directory = "dist/functions"

@@ -3,7 +3,7 @@ import { fileURLToPath } from "url";
 import { defineConfig } from "astro/config";
 import compress from "astro-compress";
 import { SITE } from "./src/config.ts";
-import netlify from '@astrojs/netlify/edge-functions';
+import netlify from '@astrojs/netlify/functions';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // https://astro.build/config
@@ -12,7 +12,9 @@ export default defineConfig({
   base: SITE.basePathname,
   trailingSlash: "never",
   output: "server",
-  adapter: netlify(),
+  adapter: netlify({
+    dist: new URL('./dist/', import.meta.url)
+  }),
   integrations: [
     compress({
       css: true,
