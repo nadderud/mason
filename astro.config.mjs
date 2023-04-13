@@ -1,10 +1,7 @@
-import path from "path";
-import { fileURLToPath } from "url";
 import { defineConfig } from "astro/config";
 import compress from "astro-compress";
 import { SITE } from "./src/config.ts";
 import netlify from '@astrojs/netlify/functions';
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // https://astro.build/config
 export default defineConfig({
@@ -28,7 +25,7 @@ export default defineConfig({
   vite: {
     resolve: {
       alias: {
-        "~": path.resolve(__dirname, "./src"),
+        "~": "/src",
       },
     },
   },
