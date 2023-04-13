@@ -1,21 +1,20 @@
 import path from "path";
 import { fileURLToPath } from "url";
 import { defineConfig } from "astro/config";
-import sitemap from "@astrojs/sitemap";
 import image from "@astrojs/image";
 import compress from "astro-compress";
 import { SITE } from "./src/config.ts";
-import netlify from "@astrojs/netlify/functions";
+import netlify from '@astrojs/netlify/edge-functions';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // https://astro.build/config
 export default defineConfig({
   site: SITE.origin,
   base: SITE.basePathname,
-  trailingSlash: SITE.trailingSlash ? "always" : "never",
+  trailingSlash: "never",
   output: "server",
+  adapter: netlify(),
   integrations: [
-    sitemap(),
     image({
       serviceEntryPoint: "@astrojs/image/sharp",
     }),
@@ -37,5 +36,4 @@ export default defineConfig({
       },
     },
   },
-  adapter: netlify(),
 });
