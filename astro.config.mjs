@@ -12,9 +12,7 @@ export default defineConfig({
   base: SITE.basePathname,
   trailingSlash: "never",
   output: "server",
-  adapter: netlify({
-    dist: new URL('./dist/', import.meta.url)
-  }),
+  adapter: netlify(),
   integrations: [
     compress({
       css: true,
