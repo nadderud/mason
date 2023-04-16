@@ -7,7 +7,7 @@ import netlify from '@astrojs/netlify/functions';
 export default defineConfig({
   site: SITE.origin,
   base: SITE.basePathname,
-  trailingSlash: "never",
+  trailingSlash: "ignore",
   output: "server",
   adapter: netlify({
     builders: true,
