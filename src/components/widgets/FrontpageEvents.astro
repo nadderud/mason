@@ -8,7 +8,7 @@ const subGroupIds: string[] = [
 
 const rawEvents = await getEventsFromSelectedGroups(subGroupIds);
 
-const events = rawEvents.slice(0,4)
+const events = rawEvents.sort((a, b) => new Date(a.startTimestamp).getTime() - new Date(b.startTimestamp).getTime()).slice(0,4)
 
 export interface Props {
   description: string;
