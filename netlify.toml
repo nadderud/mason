@@ -18,20 +18,20 @@
 [[headers]]
   for = "/img/*"
   [headers.values]
-    Cache-Control = "public, s-max-age=604800"
+    Cache-Control = "public, s-max-age=86400"
 [[headers]]
   for = "/*.css"
   [headers.values]
-    Cache-Control = "public, s-max-age=604800"
+    Cache-Control = "public, s-max-age=86400"
 [[headers]]
   for = "/*.js"
   [headers.values]
-    Cache-Control = "public, s-max-age=604800"
+    Cache-Control = "public, s-max-age=86400"
 
 [[headers]]
   for = "/*.js"
   [headers.values]
-    Cache-Control = "public, s-max-age=604800"
+    Cache-Control = "public, s-max-age=86400"
 
 [[headers]]
   for = "/"
