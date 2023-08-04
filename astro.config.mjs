@@ -3,6 +3,8 @@ import compress from "astro-compress";
 import { SITE } from "./src/config.ts";
 import netlify from "@astrojs/netlify/functions";
 
+import mdx from "@astrojs/mdx";
+
 // https://astro.build/config
 export default defineConfig({
   site: SITE.origin,
@@ -10,25 +12,23 @@ export default defineConfig({
   trailingSlash: "ignore",
   output: "server",
   adapter: netlify({
-    builders: true,
+    builders: true
   }),
-  integrations: [
-    compress({
-      css: true,
-      html: {
-        removeAttributeQuotes: false,
-      },
-      img: false,
-      js: true,
-      svg: false,
-      logger: 1,
-    }),
-  ],
+  integrations: [compress({
+    css: true,
+    html: {
+      removeAttributeQuotes: false
+    },
+    img: false,
+    js: true,
+    svg: false,
+    logger: 1
+  }), mdx()],
   vite: {
     resolve: {
       alias: {
-        "~": "/src",
-      },
-    },
-  },
+        "~": "/src"
+      }
+    }
+  }
 });
