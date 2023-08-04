@@ -17,7 +17,11 @@ collections:
     summary: "{{year}}-{{month}}-{{day}}: {{title}}"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - { name: "layout", widget: "hidden", default: "../../layouts/ArticleLayout.astro" }
+      - {
+          name: "layout",
+          widget: "hidden",
+          default: "../../layouts/ArticleLayout.astro",
+        }
       - { label: "Tittel", name: "title", widget: "string" }
       - { label: "Bilde", name: "featuredimage", widget: image }
       - {
@@ -47,12 +51,24 @@ collections:
         name: "forside"
         delete: false
         fields:
-          - { name: "layout", widget: "hidden", default: "../layouts/FrontpageLayout.astro" }
+          - {
+              name: "layout",
+              widget: "hidden",
+              default: "../layouts/FrontpageLayout.astro",
+            }
           - { label: "slagord", name: "slagord", widget: "string" }
           - { label: "featuredImage", name: "featuredImage", widget: image }
           - { label: Beskrivelse, name: description, widget: string }
-          - { label: "Arrangementer tekst", name: "eventText", widget: "string" }
-          - { label: "Speider er spennende bilde", name: "largeImage", widget: "image" }
+          - {
+              label: "Arrangementer tekst",
+              name: "eventText",
+              widget: "string",
+            }
+          - {
+              label: "Speider er spennende bilde",
+              name: "largeImage",
+              widget: "image",
+            }
           - { label: "Flokken tekst", name: "flokkenText", widget: "string" }
           - { label: "Troppen tekst", name: "troppenText", widget: "string" }
           - { label: "Rover tekst", name: "roverText", widget: "string" }
@@ -61,7 +77,11 @@ collections:
         name: "info"
         delete: false
         fields:
-          - { name: "layout", widget: "hidden", default: "../layouts/MarkdownPageLayout.astro"}
+          - {
+              name: "layout",
+              widget: "hidden",
+              default: "../layouts/MarkdownPageLayout.astro",
+            }
           - { label: Tittel, name: "title", widget: "string" }
           - { label: Bilde, name: image, widget: image }
           - { label: Beskrivelse, name: description, widget: string }
@@ -72,7 +92,11 @@ collections:
         name: "bli-speider"
         delete: false
         fields:
-          - { name: "layout", widget: "hidden", default: "../layouts/MarkdownPageLayout.astro"}
+          - {
+              name: "layout",
+              widget: "hidden",
+              default: "../layouts/MarkdownPageLayout.astro",
+            }
           - { label: Tittel, name: "title", widget: "string" }
           - { label: Bilde, name: image, widget: image }
           - { label: Beskrivelse, name: description, widget: string }
@@ -82,7 +106,11 @@ collections:
         name: "program"
         delete: false
         fields:
-          - { name: "layout", widget: "hidden", default: "../layouts/MarkdownPageLayout.astro"}
+          - {
+              name: "layout",
+              widget: "hidden",
+              default: "../layouts/MarkdownPageLayout.astro",
+            }
           - { label: Tittel, name: "title", widget: "string" }
           - { label: Bilde, name: image, widget: image }
           - { label: Beskrivelse, name: description, widget: string }
@@ -92,7 +120,11 @@ collections:
         name: "wiki"
         delete: false
         fields:
-          - { name: "layout", widget: "hidden", default: "../layouts/WikiPageLayout.astro"}
+          - {
+              name: "layout",
+              widget: "hidden",
+              default: "../layouts/WikiPageLayout.astro",
+            }
           - { label: "Tittel", name: "title", widget: "string" }
           - { label: "Bilde", name: "image", widget: image }
           - { label: Beskrivelse, name: description, widget: string }
@@ -106,7 +138,11 @@ collections:
     preview: false
     slug: "{{slug}}"
     fields:
-      - { name: "layout", widget: "hidden", default: "../../layouts/WikiPageLayout.astro" }
+      - {
+          name: "layout",
+          widget: "hidden",
+          default: "../../layouts/WikiPageLayout.astro",
+        }
       - { label: "Tittel", name: "title", widget: "string" }
       - { label: Beskrivelse, name: description, widget: string }
       - { label: "Innhold", name: "body", widget: "markdown" }

@@ -1,7 +1,7 @@
 import { defineConfig } from "astro/config";
 import compress from "astro-compress";
 import { SITE } from "./src/config.ts";
-import netlify from '@astrojs/netlify/functions';
+import netlify from "@astrojs/netlify/functions";
 
 // https://astro.build/config
 export default defineConfig({

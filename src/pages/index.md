@@ -1,6 +1,6 @@
 ---
 layout: "../layouts/FrontpageLayout.astro"
-slagord: 'Friluft, mestring og samhold!'
+slagord: "Friluft, mestring og samhold!"
 featuredImage: /img/upload/leirbaal.jpg
 description: >-
   Spennende friluftsliv for barn og ungdom fra 3. klasse og oppover. Vi er en
