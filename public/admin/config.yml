@@ -46,7 +46,7 @@ collections:
   - name: "pages"
     label: "Sider"
     files:
-      - file: "src/pages/index.md"
+      - file: "src/pages/index.mdx"
         label: "Forsiden"
         name: "forside"
         delete: false
