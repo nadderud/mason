@@ -5,8 +5,9 @@ import PageLayout from '~/layouts/PageLayout.astro';
 const posts = await Astro.glob('/src/pages/artikler/*.md');
 
 const meta = {
-  title: "Artikler",
-  description: "Alle artiklene til Nadderud speidergruppe. Nyheter, årsmeldinger, speiderhistorier og mer.",
+  title: 'Artikler',
+  description:
+    'Alle artiklene til Nadderud speidergruppe. Nyheter, årsmeldinger, speiderhistorier og mer.',
 };
 ---
 
@@ -31,7 +32,11 @@ const meta = {
             return (
               <a class='card bg-base-100 shadow-xl' href={`${post.url}`}>
                 <figure class='h-52'>
-                  <img src={featuredimage || '/img/nsf.png'} alt={`Bilde til artikel: ${title}`} loading="lazy" />
+                  <img
+                    src={featuredimage || '/img/nsf.png'}
+                    alt={`Bilde til artikel: ${title}`}
+                    loading='lazy'
+                  />
                 </figure>
                 <div class='card-body'>
                   <h2 class='card-title'>{title}</h2>

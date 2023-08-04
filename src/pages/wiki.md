@@ -6,4 +6,3 @@ image: /img/upload/lomma.jpg
 description: "I denne wikien finner du informasjon om alt fra speidergruppen, speiderlivet, speiderloven og sanger."
 ---
 
-👷‍♀️👷 Wikien er under konstruksjon og vil bli fyldigere etterhvert. 🦺 🏗️
