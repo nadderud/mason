@@ -18,10 +18,24 @@ const { frontmatter } = Astro.props;
 ---
 
 <PageLayout
-  meta={{ title: frontmatter.title, description: frontmatter.description, image: frontmatter.featuredimage }}
+  meta={{
+    title: frontmatter.title,
+    description: frontmatter.description,
+    image: frontmatter.featuredimage,
+  }}
 >
   <Hero image={frontmatter.featuredimage} title={frontmatter.title} />
   <article class='prose max-w-2xl mx-auto p-4'>
+    <p class='italic'>
+      Sist oppdatert: {
+        new Date(frontmatter.date).toLocaleDateString('no-NO', {
+          year: 'numeric',
+          month: 'short',
+          day: '2-digit',
+        })
+      }
+    </p>
+    <p class='font-bold'>{frontmatter.description}</p>
     <slot />
   </article>
 </PageLayout>
