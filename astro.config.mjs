@@ -8,7 +8,9 @@ export default defineConfig({
   base: SITE.basePathname,
   trailingSlash: 'ignore',
   output: 'server',
-  adapter: netlify(),
+  adapter: netlify({
+    builders: true,
+  }),
   vite: {
     resolve: {
       alias: {
