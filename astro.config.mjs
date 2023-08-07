@@ -7,7 +7,7 @@ export default defineConfig({
   site: SITE.origin,
   base: SITE.basePathname,
   trailingSlash: 'ignore',
-  output: 'server',
+  output: 'hybrid',
   adapter: netlify({
     builders: true,
   }),
