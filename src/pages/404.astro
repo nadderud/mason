@@ -1,5 +1,7 @@
 ---
 import PageLayout from '~/layouts/PageLayout.astro'
+
+const number = await fetch("https://www.random.org/integers/?num=1&min=1&max=200&col=1&base=10&format=plain&rnd=new").then(res => res.text())
 ---
 
 <PageLayout>
@@ -9,6 +11,6 @@ import PageLayout from '~/layouts/PageLayout.astro'
         <br />
         <a class="link" href="/">Tilbake til forsiden</a>
 
-        {`<!-- ssr_testnumber: ${Math.random()}-->`}
+        {number}
     </section>
 </PageLayout>
