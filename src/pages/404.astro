@@ -1,5 +1,8 @@
 ---
 import PageLayout from '~/layouts/PageLayout.astro'
+
+// this is just to test that SSR works on netlify
+const number = await fetch("https://www.random.org/integers/?num=1&min=1&max=200&col=1&base=10&format=plain&rnd=new").then(res => res.text())
 ---
 
 <PageLayout>
@@ -8,5 +11,7 @@ import PageLayout from '~/layouts/PageLayout.astro'
         <p>Beklager vi fant ikke det du lette etter</p>
         <br />
         <a class="link" href="/">Tilbake til forsiden</a>
+
+        <a style="display:none;">{number}</a>
     </section>
 </PageLayout>

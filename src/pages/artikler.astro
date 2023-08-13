@@ -17,47 +17,44 @@ const meta = {
     image='/img/upload/bål.jpeg'
     description='Her kan du finne alle artiklene til Nadderud speidergruppe. Nyheter, årsmeldinger, speiderhistorier og mer.'
   />
-  <main>
-    <section class='p-4'>
-      {
-        posts
-          .sort(
-            (a, b) =>
-              new Date(String(b.frontmatter.date)).getTime() -
-              new Date(String(a.frontmatter.date)).getTime()
-          )
-          .map((post) => {
-            const { title, description, featuredimage, tags } =
-              post.frontmatter;
-            return (
-              <a class='card bg-base-100 shadow-xl' href={`${post.url}`}>
-                <figure class='h-52'>
-                  <img
-                    src={featuredimage || '/img/nsf.png'}
-                    alt={`Bilde til artikel: ${title}`}
-                    loading='lazy'
-                  />
-                </figure>
-                <div class='card-body'>
-                  <h2 class='card-title'>{title}</h2>
-                  <div class='flex gap-2'>
-                    {tags &&
-                      tags.map((tag) => {
-                        if (!/^$|^\.|\-$/.test(tag))
-                          return <span class='badge'>{tag}</span>;
-                      })}
-                  </div>
-                  <p>
-                    {String(description).slice(0, 100)}
-                    {description.length > 100 ? ' ...' : ''}
-                  </p>
+  <section class='p-4'>
+    {
+      posts
+        .sort(
+          (a, b) =>
+            new Date(String(b.frontmatter.date)).getTime() -
+            new Date(String(a.frontmatter.date)).getTime()
+        )
+        .map((post) => {
+          const { title, description, featuredimage, tags } = post.frontmatter;
+          return (
+            <a class='card bg-base-100 shadow-xl' href={`${post.url}`}>
+              <figure class='h-52'>
+                <img
+                  src={featuredimage || '/img/nsf.png'}
+                  alt={`Bilde til artikel: ${title}`}
+                  loading='lazy'
+                />
+              </figure>
+              <div class='card-body'>
+                <h2 class='card-title'>{title}</h2>
+                <div class='flex gap-2'>
+                  {tags &&
+                    tags.map((tag) => {
+                      if (!/^$|^\.|\-$/.test(tag))
+                        return <span class='badge'>{tag}</span>;
+                    })}
                 </div>
-              </a>
-            );
-          })
-      }
-    </section>
-  </main>
+                <p>
+                  {String(description).slice(0, 100)}
+                  {description.length > 100 ? ' ...' : ''}
+                </p>
+              </div>
+            </a>
+          );
+        })
+    }
+  </section>
 </PageLayout>
 
 <style>
