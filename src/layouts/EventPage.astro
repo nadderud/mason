@@ -39,8 +39,8 @@ let events = await getEvents(import.meta.env.SPOND_SESSION_TOKEN, {
     <p class='font-bold'>{frontmatter.description}</p>
     <slot />
   </section>
-  <section class='max-w-xl mx-auto p-4 w-full pb-6'>
-    <table class='table table-zebra justify-start w-full'>
+  <section class='overflow-x-auto max-w-xl mx-auto p-4 w-full pb-6'>
+    <table class='table justify-start w-full'>
       <thead>
         <tr>
           <th></th>
