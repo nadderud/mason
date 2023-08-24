@@ -3,9 +3,10 @@ export interface Props {
   slagord: string;
   description: string;
   featuredImage: string;
+  alt: string;
 }
 
-const { slagord, description, featuredImage } = Astro.props;
+const { slagord, description, featuredImage, alt } = Astro.props;
 ---
 
 <section id="hero" class='hero-section'>
@@ -21,7 +22,7 @@ const { slagord, description, featuredImage } = Astro.props;
   <img
     src={featuredImage}
     class='aspect-square object-cover image'
-    alt='Astro'
+    alt={alt}
     style='grid-area: image;'
   />
 </section>
