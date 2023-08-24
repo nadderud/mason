@@ -18,6 +18,7 @@
     "eslint": "^8.46.0",
     "postcss": "^8.1.6",
     "prettier": "^2.8.8",
+    "spond": "^0.0.10",
     "tailwindcss": "^3.3.3",
     "typescript": "^5.1.6"
   },
@@ -25,7 +26,6 @@
     "node": ">=16.12.0"
   },
   "dependencies": {
-    "@astrojs/netlify": "^2.5.2",
     "autoprefixer": "^10.0.2"
   },
   "pnpm": {

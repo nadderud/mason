@@ -1,11 +1,12 @@
 ---
-layout: "../layouts/MarkdownPageLayout.astro"
+layout: "../layouts/EventPage.astro"
 date: 2019-05-22T17:12:33.962Z
 title: Program
 image: /img/upload/flaate.jpg
-description: Program for Nadderud speidergruppe
+description: Se programmet for Nadderud speidergruppe. For mer informasjon om
+  programmet kan du logge inn på Spond eller kontakte oss.
 ---
 
 ## Program
 
-Vi jobber med å legge programmet inn på nettsiden. I mellomtiden kan du finne ut hva som er planen fremmover ved å sjekke Spond eller kontakte oss. [kontakt oss](/info).
+Programmet på nettsiden er hentet fra Spond. For å få mer detaljert informasjon om programmet kan du logge in på Spond eller kontakte oss. [kontakt oss](/info).

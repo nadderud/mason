@@ -1,15 +1,15 @@
 ---
-import { getEventsFromSelectedGroups } from '~/utils/spond';
+import { getEvents } from 'spond';
 
-const subGroupIds: string[] = [
-  'DEB269433BAD4F0F9F96AAC757678537',
-  '6549C386074E409EAAF5EDA6336129E5',
-  '9EEE9080E5324C5FAC214E6B678953BC'
-];
+let events = await getEvents(import.meta.env.SPOND_SESSION_TOKEN, {
+  groupId: import.meta.env.SPOND_GROUP_ID,
+  includeHidden: true,
+  minEndTimestamp: new Date().toISOString(),
+  scheduled: true,
+  max: 10,
+});
 
-const rawEvents = await getEventsFromSelectedGroups(subGroupIds);
-
-const events = rawEvents.sort((a, b) => new Date(a.startTimestamp).getTime() - new Date(b.startTimestamp).getTime()).slice(0,4)
+events = events.slice(0, 4);
 
 export interface Props {
   description: string;
@@ -36,7 +36,7 @@ const { description } = Astro.props;
         class='h-full flex flex-col'
       >
         <img class='bg-base-200 object-cover' src={event.picture || "/img/upload/vann.jpg"} alt={`Bilde til ${event.heading}`} loading="lazy"  />
-        <p>{new Date(event.startTimestamp).toLocaleDateString("no-NO", {day: "2-digit", weekday: "short", month: "long"})}</p>
+        <p>{new Date(event.startTimestamp).toLocaleDateString("no-NO", {day: "2-digit", weekday: "short", month: "long", year: "numeric"})}</p>
         <h3 class="font-bold">{event.heading}</h3>
       </div>
     ))

@@ -1,0 +1,109 @@
+---
+import type { MarkdownLayoutProps } from 'astro';
+import { getEvents } from 'spond';
+
+import Hero from '~/components/common/Hero.astro';
+import PageLayout from './PageLayout.astro';
+
+type Props = MarkdownLayoutProps<{
+  title: string;
+  date: string;
+  description: string;
+  image: string;
+  expireInDays: number;
+  tags: string[];
+}>;
+
+const { frontmatter } = Astro.props;
+
+let currentMonth: null | number = null;
+
+let events = await getEvents(import.meta.env.SPOND_SESSION_TOKEN, {
+  groupId: import.meta.env.SPOND_GROUP_ID,
+  includeHidden: true,
+  minEndTimestamp: new Date().toISOString(),
+  scheduled: true,
+  max: 50,
+});
+---
+
+<PageLayout
+  meta={{
+    title: frontmatter.title,
+    description: frontmatter.description,
+    image: frontmatter.image,
+  }}
+>
+  <Hero image={frontmatter.image} title={frontmatter.title} />
+  <section class='prose max-w-2xl mx-auto p-4'>
+    <p class='font-bold'>{frontmatter.description}</p>
+    <slot />
+  </section>
+  <section class='max-w-xl mx-auto p-4 w-full pb-6'>
+    <table class='table table-zebra justify-start w-full'>
+      <thead>
+        <tr>
+          <th></th>
+          <th>Hva skjer?</th>
+          <th>Hvem?</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          events.map((event) => (
+            <>
+              {currentMonth !== new Date(event.startTimestamp).getMonth() && (
+                <tr class='bg-slate-600'>
+                  {(currentMonth = new Date(event.startTimestamp).getMonth()) &&
+                    null}
+                  <th class='first-letter:uppercase text-lg'>
+                    {new Date(event.startTimestamp).toLocaleString('no-No', {
+                      month: 'long',
+                    })}
+                  </th>
+                  <th />
+                  <th />
+                </tr>
+              )}
+              <tr>
+                <td>
+                  {new Date(event.startTimestamp).toLocaleString('no-No', {
+                    day: 'numeric',
+                    month: 'short',
+                  })}
+                </td>
+                <td>
+                  {event.picture ? (
+                    <div class='flex items-center space-x-3'>
+                      <div class='avatar'>
+                        <div class='mask mask-squircle w-12 h-12'>
+                          <img
+                            src={event.picture}
+                            alt={`Bilde av ${event.heading}`}
+                          />
+                        </div>
+                      </div>
+                      <div>{event.heading}</div>
+                    </div>
+                  ) : (
+                    event.heading
+                  )}
+                </td>
+                <td>
+                  <div 
+                    class="inline-block whitespace-nowrap rounded-full px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.8em]  leading-none text-white" 
+                    style={`background-color: ${event.recipients.group.subGroups ? event.recipients.group.subGroups[0].color : null};`}
+                    >
+                    {event.recipients.group.subGroups
+                      .map((subgroup) => subgroup.name)
+                      .join(', ')}
+                  </div>
+                </td>
+              </tr>
+            </>
+          ))
+        }
+      </tbody>
+    </table>
+  </section>
+</PageLayout>
