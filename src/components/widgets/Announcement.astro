@@ -1,8 +1,26 @@
 ---
+const date = new Date();
+let message = '';
+
+if (date.getMonth() > 6 && date.getMonth() < 8) {
+  message = `Speiderhøsten ${new Date().getFullYear()} er snart i gang! Sjekk Spond for den nyeste informasjonen.`;
+}
+
+if (date.getMonth() > 11 || date.getMonth() < 2) {
+  message = `Vinterspeidingen er i gang! Sjekk Spond for den nyeste informasjonen.`;
+}
 ---
 
 <section
-  id="announcement"
-  class="hidden md:block bg-blue-900 dark:bg-slate-800 dark:border-slate-800 dark:text-slate-400 border-b border-blue-900 text-sm px-3 py-2 text-gray-200 overflow-hidden whitespace-nowrap text-ellipsis"
+  id='announcement'
+  class=' bg-blue-800 text-sm px-3 py-2 text-gray-100 md:text-center'
 >
+  {message}{
+    message && (
+      <>
+        Ny i speideren?{' '}
+        <a href='/bli-speider' class="underline">Les mer her.</a>
+      </>
+    )
+  }
 </section>
