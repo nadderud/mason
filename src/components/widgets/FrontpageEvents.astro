@@ -36,7 +36,7 @@ const { description } = Astro.props;
         class='h-full flex flex-col'
       >
         <img class='bg-base-200 object-cover' src={event.picture || "/img/upload/vann.jpg"} alt={`Bilde til ${event.heading}`} loading="lazy"  />
-        <p>{new Date(event.startTimestamp).toLocaleDateString("no-NO", {day: "2-digit", weekday: "short", month: "long", year: "numeric"})}</p>
+        <p class="first-letter:uppercase">{new Date(event.startTimestamp).toLocaleDateString("no-NO", {day: "2-digit", weekday: "short", month: "short"})}</p>
         <h3 class="font-bold">{event.heading}</h3>
       </div>
     ))

@@ -53,7 +53,7 @@ let events = await getEvents(import.meta.env.SPOND_SESSION_TOKEN, {
           events.map((event) => (
             <>
               {currentMonth !== new Date(event.startTimestamp).getMonth() && (
-                <tr class='bg-slate-600'>
+                <tr>
                   {(currentMonth = new Date(event.startTimestamp).getMonth()) &&
                     null}
                   <th class='first-letter:uppercase text-lg'>
