@@ -19,14 +19,16 @@ const { description } = Astro.props;
 
 ---
 
-<section id="events-summary" class='events px-5 pt-8'>
+<section id="events-summary" class='events px-5 pt-8 md:pb-8'>
   <div style='grid-area: text;' class='relative'>
+    <a class="link link-neutral" href="/program">
     <h2 class='text-2xl tracking-tight py-4'>Kommende arrangementer</h2>
+  </a>
     <p>
       {description}
     </p>
     <p class="py-2">
-      Trenger du bruker på Spond? <a href='/info' class="link">Kontakt oss</a>
+      Trenger du bruker på Spond? <a href='/info' class="link link-neutral">Kontakt oss</a>
     </p>
   </div>
   {
