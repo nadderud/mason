@@ -39,7 +39,7 @@ let events = await getEvents(import.meta.env.SPOND_SESSION_TOKEN, {
     <p class='font-bold'>{frontmatter.description}</p>
     <slot />
   </section>
-  <section class='overflow-x-auto max-w-xl mx-auto p-4 w-full pb-6'>
+  <section class='overflow-x-auto max-w-2xl mx-auto p-4 w-full pb-6'>
     <table class='table justify-start w-full'>
       <thead>
         <tr>
@@ -89,15 +89,15 @@ let events = await getEvents(import.meta.env.SPOND_SESSION_TOKEN, {
                     event.heading
                   )}
                 </td>
-                <td>
-                  <div 
-                    class="inline-block whitespace-nowrap rounded-full px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.8em]  leading-none text-white" 
-                    style={`background-color: ${event.recipients.group.subGroups ? event.recipients.group.subGroups[0].color : null};`}
-                    >
-                    {event.recipients.group.subGroups
-                      .map((subgroup) => subgroup.name)
-                      .join(', ')}
-                  </div>
+                <td class="flex">
+                  {event.recipients.group.subGroups.map((subgroup) => (
+                    <div 
+                      class="inline-block whitespace-nowrap rounded-full m-1 px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.8em]  leading-none text-white" 
+                      style={`background-color: ${subgroup.color};`}
+                      >
+                       {subgroup.name}
+                    </div>
+                    ))}
                 </td>
               </tr>
             </>
