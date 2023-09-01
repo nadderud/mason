@@ -10,17 +10,15 @@ if (date.getMonth() > 11 || date.getMonth() < 2) {
   message = `Vinterspeidingen er i gang! Sjekk Spond for den nyeste informasjonen.`;
 }
 ---
-
-<section
-  id='announcement'
-  class=' bg-blue-800 text-sm px-3 py-2 text-gray-100 md:text-center'
->
-  {message}{
-    message && (
-      <>
-        Ny i speideren?{' '}
+{
+  message && (
+    <section
+      id='announcement'
+      class=' bg-blue-800 text-sm px-3 py-2 text-gray-100 md:text-center'
+    >
+      {message}{' '}Ny i speideren?{' '}
         <a href='/bli-speider' class="underline">Les mer her.</a>
-      </>
-    )
-  }
-</section>
+    </section>
+  )
+}
+
