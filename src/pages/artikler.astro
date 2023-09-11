@@ -17,7 +17,7 @@ const meta = {
     image='/img/upload/bål.jpeg'
     description='Her kan du finne alle artiklene til Nadderud speidergruppe. Nyheter, årsmeldinger, speiderhistorier og mer.'
   />
-  <section class='p-4'>
+  <section>
     {
       posts
         .sort(
@@ -63,6 +63,8 @@ const meta = {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 1rem;
     max-width: 1200px;
-    margin: 0 auto;
+    width: 100%;
+    margin: 10px auto;
+    padding: 14px;
   }
 </style>
