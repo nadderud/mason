@@ -89,7 +89,7 @@ let events = await getEvents(import.meta.env.SPOND_SESSION_TOKEN, {
                     event.heading
                   )}
                 </td>
-                <td class="flex">
+                <td>
                   {event.recipients.group.subGroups.map((subgroup) => (
                     <div 
                       class="inline-block whitespace-nowrap rounded-full m-1 px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.8em]  leading-none text-white" 
