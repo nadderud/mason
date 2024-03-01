@@ -1,6 +1,6 @@
 ---
 import type { MarkdownLayoutProps } from 'astro';
-import { getEvents } from 'spond';
+import { getSpondEvents } from '~/utils/spond';
 
 import Hero from '~/components/common/Hero.astro';
 import PageLayout from './PageLayout.astro';
@@ -18,12 +18,12 @@ const { frontmatter } = Astro.props;
 
 let currentMonth: null | number = null;
 
-let events = await getEvents(import.meta.env.SPOND_SESSION_TOKEN, {
+let events = await getSpondEvents(import.meta.env.SPOND_SESSION_TOKEN, {
   groupId: import.meta.env.SPOND_GROUP_ID,
   includeHidden: true,
   minEndTimestamp: new Date().toISOString(),
   scheduled: true,
-  max: 50,
+  maxEvents: 50,
 });
 ---
 

@@ -1,12 +1,12 @@
 ---
-import { getEvents } from 'spond';
+import { getSpondEvents } from '~/utils/spond';
 
-let events = await getEvents(import.meta.env.SPOND_SESSION_TOKEN, {
+let events = await getSpondEvents(import.meta.env.SPOND_SESSION_TOKEN, {
   groupId: import.meta.env.SPOND_GROUP_ID,
   includeHidden: true,
   minEndTimestamp: new Date().toISOString(),
   scheduled: true,
-  max: 10,
+  maxEvents: 10,
 });
 
 events = events.slice(0, 4);
