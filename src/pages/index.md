@@ -7,7 +7,7 @@ description: >-
   aktiv speidergruppe med ca. 100 medlemmer som dekker området Nadderud,
   Bekkestua, Hosle, Eikeli og Haslum.
 eventText: >-
-  Naddeurd speidergruppe gjennomfører mange spennende turer, arrangementer og
+  Nadderud speidergruppe gjennomfører mange spennende turer, arrangementer og
   møter gjennom året. Sammen lager vi den beste friliftlivsopplevelsen! For å
   holde deg som forelder/speider oppdatert gjennom året, bruker vi Spond. Her
   kan du se noen av de kommende arrangementene.
