@@ -1,13 +1,13 @@
 ---
-layout: "../layouts/MarkdownPageLayout.astro"
+layout: ../layouts/MarkdownPageLayout.astro
 title: Bli speider
 image: /img/upload/leirbaal.jpg
-description: >-
-  Speidere synes det er gøy å være ute. Du kan bli speider hvis du går i 3.
-  klasse eller mer.
+description: Speidere synes det er gøy å være ute. Du kan bli speider hvis du
+  går i 3. klasse eller mer.
 ---
-
 <a href="https://min.speiding.no/register/in/group/1003" target="_blank">Gå til innmeldingsskjema (egen fane)</a>
+
+*OBS: F﻿or tiden har vi venteliste for nye medlemmer i flokken (speidere i 3. og 4. klasse) da vi er for mange speidere i forhold til ledere. Det er mulig å melde seg inn i min.speiding.no på linken ovenfor, men man vil bli satt på venteliste inntil det er plass i flokken. Takk for forståelsen!*
 
 ## Spørsmål om speiding
 
